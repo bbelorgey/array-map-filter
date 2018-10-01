@@ -24,6 +24,13 @@ Sortie attendue:
  */
 
 function keepStarks(names) {
+  let myArray = [];
+  names.filter(name => {
+    if(name.endsWith("Stark")) {
+      myArray.push(name);
+    }
+  });
+  return myArray;
 }
 
 // Ne pas modifier l'export
