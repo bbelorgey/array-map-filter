@@ -11,7 +11,7 @@ Tableau en entrée:
 [
   { name: 'Yoda', side: 'light' },
   { name: 'Count Dooku', side: 'dark' },
-  { name: 'Obiwan Kenobi', side: 'light' },
+  { name: 'Obiwan Kenobi', side:  },
   { name: 'Mace Windu', side: 'light' },
   { name: 'Darth Sidious', side: 'dark' },
   { name: 'Darth Maul', side: 'dark' }
@@ -23,6 +23,11 @@ Sortie attendue:
 */
 
 function getJedisNames(characters) {
+  return characters.filter(character => {
+    return character.side === 'light';
+  }).map(arg => { 
+    return arg.name;
+  });
 }
 
 module.exports = getJedisNames;
